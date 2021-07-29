@@ -51,11 +51,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tVf-97-YId" firstAttribute="top" secondItem="Tto-Cv-gmY" secondAttribute="bottom" id="27M-Wq-CMG"/>
-                            <constraint firstItem="tVf-97-YId" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="66q-tT-NEM"/>
+                            <constraint firstItem="tVf-97-YId" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="66q-tT-NEM"/>
                             <constraint firstItem="tVf-97-YId" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9mS-zD-YGu"/>
                             <constraint firstItem="Tto-Cv-gmY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lRb-6g-L8P"/>
                             <constraint firstItem="Tto-Cv-gmY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q3X-Pl-yJ6"/>
-                            <constraint firstItem="tVf-97-YId" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vAS-0k-VBr"/>
+                            <constraint firstItem="tVf-97-YId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vAS-0k-VBr"/>
                             <constraint firstItem="Tto-Cv-gmY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="weA-6V-xHa"/>
                         </constraints>
                     </view>
