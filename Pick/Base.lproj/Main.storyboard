@@ -178,7 +178,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
-                                    <action selector="share:forEvent:" destination="M97-GP-2b3" eventType="touchUpInside" id="1fs-V4-EfN"/>
+                                    <action selector="share:" destination="M97-GP-2b3" eventType="touchUpInside" id="wul-UE-YnR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fC-sG-ybo">

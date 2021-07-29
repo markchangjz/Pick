@@ -10,8 +10,7 @@ class ResultViewController: UIViewController {
         resultLabel.text = DataPersistence.candidates?.randomElement()
     }
 
-    @IBAction func share(_ sender: Any, forEvent event: UIEvent) {
-        
+    @IBAction func share(_ sender: UIButton) {
         let shareText = "Go for \"\(resultLabel.text!)\""
         
         let activityViewController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
