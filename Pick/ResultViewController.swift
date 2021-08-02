@@ -11,7 +11,8 @@ class ResultViewController: UIViewController {
     }
 
     @IBAction func share(_ sender: UIButton) {
-        let shareText = "Go for \"\(resultLabel.text!)\""
+        let googleMapsLink = "comgooglemaps://?q=\(resultLabel.text!)"
+        let shareText = "Go for \"\(resultLabel.text!)\n\nGoogle Maps: \(googleMapsLink)"
         
         let activityViewController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
         present(activityViewController, animated: true)
