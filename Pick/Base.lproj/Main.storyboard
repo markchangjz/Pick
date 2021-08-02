@@ -17,18 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVf-97-YId">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="p37-SC-CTj"/>
-                                    <barButtonItem title="Pick" id="Laq-CD-qcJ">
-                                        <connections>
-                                            <action selector="pick:" destination="BYZ-38-t0r" id="QaI-XR-H7u"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xmq-9d-DKS"/>
-                                </items>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-Cv-gmY">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <prototypes>
@@ -46,15 +34,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Acl-ha-8Xg"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVf-97-YId">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="p37-SC-CTj"/>
+                                    <barButtonItem title="Pick" id="Laq-CD-qcJ">
+                                        <connections>
+                                            <action selector="pick:" destination="BYZ-38-t0r" id="QaI-XR-H7u"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xmq-9d-DKS"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tVf-97-YId" firstAttribute="top" secondItem="Tto-Cv-gmY" secondAttribute="bottom" id="27M-Wq-CMG"/>
                             <constraint firstItem="tVf-97-YId" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="66q-tT-NEM"/>
                             <constraint firstItem="tVf-97-YId" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9mS-zD-YGu"/>
                             <constraint firstItem="Tto-Cv-gmY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lRb-6g-L8P"/>
                             <constraint firstItem="Tto-Cv-gmY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q3X-Pl-yJ6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tto-Cv-gmY" secondAttribute="bottom" constant="49" id="rcT-bV-YmT"/>
                             <constraint firstItem="tVf-97-YId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vAS-0k-VBr"/>
                             <constraint firstItem="Tto-Cv-gmY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="weA-6V-xHa"/>
                         </constraints>
@@ -73,15 +73,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="-1"/>
+            <point key="canvasLocation" x="863.768115942029" y="-1.3392857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nXG-HB-7lU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tak-qb-mCt" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KSE-Oj-xdm">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="KSE-Oj-xdm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -198,7 +198,7 @@
                             <constraint firstItem="eVU-FU-ZaK" firstAttribute="centerX" secondItem="X1c-ui-oTx" secondAttribute="centerX" id="uZg-TU-raV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Result" id="YvZ-tg-MHl"/>
+                    <navigationItem key="navigationItem" title="Result" largeTitleDisplayMode="never" id="YvZ-tg-MHl"/>
                     <connections>
                         <outlet property="resultLabel" destination="4fC-sG-ybo" id="gzF-78-k7F"/>
                     </connections>
