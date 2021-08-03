@@ -20,13 +20,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-Cv-gmY">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="q3y-zz-ocn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="q3y-zz-ocn">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q3y-zz-ocn" id="pdz-8k-Sw1">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="M97-GP-2b3" kind="show" identifier="showDetail" id="cBp-uQ-mJY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -68,7 +71,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Tto-Cv-gmY" id="RtT-jw-pfP"/>
-                        <segue destination="M97-GP-2b3" kind="show" identifier="result" id="kOO-8w-2bM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -168,7 +170,7 @@
         <!--Result-->
         <scene sceneID="vQK-XK-P0N">
             <objects>
-                <viewController id="M97-GP-2b3" customClass="ResultViewController" customModule="Pick" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M97-GP-2b3" customClass="ResultViewController" customModule="Pick" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X1c-ui-oTx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +202,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Result" largeTitleDisplayMode="never" id="YvZ-tg-MHl"/>
                     <connections>
-                        <outlet property="resultLabel" destination="4fC-sG-ybo" id="gzF-78-k7F"/>
+                        <outlet property="resultLabel" destination="4fC-sG-ybo" id="vM2-p5-rvz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exN-rU-7bh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

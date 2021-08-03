@@ -11,8 +11,10 @@ class CandidateViewController: UIViewController {
 
     @IBAction func pick(_ sender: UIBarButtonItem) {
         
-        if let candidates = DataPersistence.candidates, candidates.count > 0 {
-            performSegue(withIdentifier: "result", sender: nil)
+        if let candidates = DataPersistence.candidates, candidates.count > 0 {            
+            let resultViewController = storyboard?.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
+            resultViewController.resultText = DataPersistence.candidates?.randomElement()
+            navigationController?.pushViewController(resultViewController, animated: true)
         }
     }
     
@@ -27,7 +29,15 @@ class CandidateViewController: UIViewController {
             tableView.reloadData()
         }
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! ResultViewController
+                destinationController.resultText = DataPersistence.candidates?[indexPath.row]
+            }
+        }
+    }
 }
 
 extension CandidateViewController: UITableViewDelegate, UITableViewDataSource {
