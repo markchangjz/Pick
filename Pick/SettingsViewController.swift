@@ -20,7 +20,7 @@ class SettingsViewController: UIViewController {
         DataPersistence.setNotificationDate((hour: components.hour, minute: components.minute))
         
         let content = UNMutableNotificationContent()
-        content.title = "Pick Restaurant!"
+        content.title = "Pick a Restaurant!"
         content.subtitle = ""
         content.body = ""
         content.badge = 1

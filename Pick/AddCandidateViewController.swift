@@ -9,7 +9,7 @@ class AddCandidateViewController: UIViewController {
         
         nameTextField.delegate = self
         nameTextField.returnKeyType = .done
-        nameTextField.becomeFirstResponder()
+        nameTextField.becomeFirstResponder() // present keyboard
     }
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
@@ -21,8 +21,7 @@ extension AddCandidateViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField {
-            textField.resignFirstResponder()
-            return false
+            textField.resignFirstResponder() // dismiss keyboard
         }
         return true
     }

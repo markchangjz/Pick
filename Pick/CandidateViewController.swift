@@ -26,6 +26,8 @@ class CandidateViewController: UIViewController {
         
         if let candidates = DataPersistence.candidates, candidates.count > 0 {            
             let resultViewController = storyboard?.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
+            
+            // Pick a Restaurant randomly
             resultViewController.resultText = DataPersistence.candidates?.randomElement()
             navigationController?.pushViewController(resultViewController, animated: true)
         }
