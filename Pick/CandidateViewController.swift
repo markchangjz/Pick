@@ -6,7 +6,20 @@ class CandidateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+//        DataPersistence.add(candidate: "B2員工餐廳")
+//        DataPersistence.add(candidate: "蘭陽水餃")
+//        DataPersistence.add(candidate: "八方雲集")
+//        DataPersistence.add(candidate: "麥當勞")
+//        DataPersistence.add(candidate: "天祥豬腳飯")
+//        DataPersistence.add(candidate: "小珍園")
+//        DataPersistence.add(candidate: "下港吔羊肉")
+//        DataPersistence.add(candidate: "鍋燒麵")
+//        DataPersistence.add(candidate: "炸雞涼麵")
+//        DataPersistence.add(candidate: "麵線傳奇")
+//        DataPersistence.add(candidate: "低GI健康美學")
+//        DataPersistence.add(candidate: "摩斯漢堡")
+//        DataPersistence.add(candidate: "港式燒臘")
     }
 
     @IBAction func pick(_ sender: UIBarButtonItem) {
