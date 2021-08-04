@@ -7,11 +7,10 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let calendar = NSCalendar.current
         var components = DateComponents()
         components.hour = DataPersistence.notificationDate?.hour
         components.minute = DataPersistence.notificationDate?.minute
-        datePicker.setDate(calendar.date(from: components)!, animated: true)
+        datePicker.setDate(NSCalendar.current.date(from: components)!, animated: true)
     }
     
     @IBAction func handleDateSelection(_ sender: UIDatePicker) {
@@ -21,8 +20,6 @@ class SettingsViewController: UIViewController {
         
         let content = UNMutableNotificationContent()
         content.title = "Pick a Restaurant!"
-        content.subtitle = ""
-        content.body = ""
         content.badge = 1
         content.sound = UNNotificationSound.default
         
