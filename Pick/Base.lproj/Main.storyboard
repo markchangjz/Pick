@@ -156,13 +156,12 @@
         <!--Notification-->
         <scene sceneID="gzt-VN-x6B">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gHs-dn-gxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="u24-uF-HTW" customClass="SettingsViewController" customModule="Pick" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l2L-2o-6Sr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="KQo-2D-9FI">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="KQo-2D-9FI">
                                 <rect key="frame" x="47" y="340" width="320" height="216"/>
                                 <connections>
                                     <action selector="handleDateSelection:" destination="u24-uF-HTW" eventType="valueChanged" id="qb4-y5-3f7"/>
@@ -181,6 +180,7 @@
                         <outlet property="datePicker" destination="KQo-2D-9FI" id="Jwm-wT-80p"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHs-dn-gxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2116" y="-1163"/>
         </scene>
