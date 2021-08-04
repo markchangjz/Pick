@@ -1,6 +1,6 @@
 import UIKit
 
-class CandidateViewController: UIViewController {
+class CandidatesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -55,7 +55,7 @@ class CandidateViewController: UIViewController {
     }
 }
 
-extension CandidateViewController: UITableViewDelegate, UITableViewDataSource {
+extension CandidatesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataPersistence.candidates?.count ?? 0
