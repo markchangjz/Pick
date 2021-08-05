@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class CandidatesViewController: UIViewController {
     
@@ -20,6 +21,34 @@ class CandidatesViewController: UIViewController {
 //        DataPersistence.add(candidate: "低GI健康美學")
 //        DataPersistence.add(candidate: "摩斯漢堡")
 //        DataPersistence.add(candidate: "港式燒臘")
+//
+//        let docData: [String: Any] = [
+//            "names": DataPersistence.candidates ?? []
+//        ]
+//
+//        let db = Firestore.firestore()
+//        db.collection("pick").document("candidates").setData(docData) { _ in
+//        }
+        
+        
+        let db = Firestore.firestore()
+        db.collection("pick").addSnapshotListener { documentSnapshot, error in
+            guard let snapshot = documentSnapshot else {
+                print("Error fetching snapshots: \(error!)")
+                return
+            }
+            snapshot.documentChanges.forEach { diff in
+                let names = diff.document.data()["names"] as? [String] ?? []
+
+                DataPersistence.deleteAllCandidates()
+                for name in names {
+                    DataPersistence.add(candidate: name)
+                }
+
+                self.tableView.reloadData()
+            }
+        }
+
     }
 
     @IBAction func pick(_ sender: UIBarButtonItem) {
@@ -30,18 +59,6 @@ class CandidatesViewController: UIViewController {
             // Pick a Restaurant randomly
             resultViewController.resultText = DataPersistence.candidates?.randomElement()
             navigationController?.pushViewController(resultViewController, animated: true)
-        }
-    }
-    
-    @IBAction func reloadView(_ unwindSegue: UIStoryboardSegue) {
-        
-        guard let addCandidateViewController = unwindSegue.source as? AddCandidateViewController else {
-            return
-        }
-
-        if let text = addCandidateViewController.nameTextField.text, text.count > 0 {
-            DataPersistence.add(candidate: text)
-            tableView.reloadData()
         }
     }
     
@@ -79,8 +96,15 @@ extension CandidatesViewController: UITableViewDelegate, UITableViewDataSource {
         
         if editingStyle == .delete {
             DataPersistence.deleteCandidate(at: indexPath.row)
-            
             tableView.deleteRows(at: [indexPath], with: .automatic)
+                                
+            let docData: [String: Any] = [
+                "names": DataPersistence.candidates ?? []
+            ]
+                    
+            let db = Firestore.firestore()
+            db.collection("pick").document("candidates").setData(docData) { _ in
+            }
         }
     }
 }

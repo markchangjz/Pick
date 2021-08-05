@@ -140,7 +140,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="I4R-mu-exJ">
                             <connections>
-                                <segue destination="ElW-gt-Ucb" kind="unwind" unwindAction="reloadView:" id="FyC-Cu-Zpn"/>
+                                <action selector="save:" destination="OXZ-HX-5g7" id="loB-Z6-j1Y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -149,7 +149,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfj-Vz-lc7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="ElW-gt-Ucb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3024.6376811594205" y="-397.09821428571428"/>
         </scene>

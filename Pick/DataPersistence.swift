@@ -8,6 +8,9 @@ class DataPersistence {
     
     static var candidates: [String]? {
         let userDefaults = UserDefaults()
+        userDefaults.register(defaults: [
+            candidateKey: [],
+        ])
         return userDefaults.stringArray(forKey: candidateKey)
     }
         
@@ -25,6 +28,11 @@ class DataPersistence {
         var candidates = self.candidates ?? []
         candidates.remove(at: index)
         userDefaults.set(candidates, forKey: candidateKey)
+    }
+    
+    class func deleteAllCandidates() {
+        let userDefaults = UserDefaults()
+        userDefaults.removeObject(forKey: candidateKey)
     }
     
     class func setNotificationDate(_ date:(hour: Int?, minute: Int?)) {

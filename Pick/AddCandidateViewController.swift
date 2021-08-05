@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class AddCandidateViewController: UIViewController {
 
@@ -15,6 +16,27 @@ class AddCandidateViewController: UIViewController {
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
+    
+    @IBAction func save(_ sender: UIBarButtonItem) {
+        
+        guard let name = nameTextField.text, name.count > 0 else { return }
+        
+        var candidates = DataPersistence.candidates ?? []
+        candidates.append(name)
+        DataPersistence.add(candidate: name)
+                
+        let docData: [String: Any] = [
+            "names": candidates
+        ]
+                
+        let db = Firestore.firestore()
+        db.collection("pick").document("candidates").setData(docData) { error in
+            if error == nil {
+                self.dismiss(animated: true)
+            }
+        }
+    }
+    
 }
 
 extension AddCandidateViewController: UITextFieldDelegate {

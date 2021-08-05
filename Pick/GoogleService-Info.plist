@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>513651516977-p5v9inctk8uj9tf6n87s3ptlfq0uc93p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.513651516977-p5v9inctk8uj9tf6n87s3ptlfq0uc93p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCgFJfGa5aFAnxRXdDlb2bzmeuP3rGdk_k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>513651516977</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>tw.com.esunbank.Pick</string>
+	<key>PROJECT_ID</key>
+	<string>pick-dc9aa</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pick-dc9aa.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:513651516977:ios:61d55b55f366679e995710</string>
+</dict>
+</plist>
