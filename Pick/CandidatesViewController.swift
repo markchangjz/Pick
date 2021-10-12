@@ -68,6 +68,11 @@ class CandidatesViewController: UIViewController {
                 let destinationController = segue.destination as! ResultViewController
                 destinationController.resultText = DataPersistence.candidates?[indexPath.row]
             }
+        } else if segue.identifier == "addCandidate" {
+            let addCandidateViewController = (segue.destination as! UINavigationController).viewControllers.first as! AddCandidateViewController
+            addCandidateViewController.addCandidateCompletion = { [weak self] in
+                self?.tableView.reloadData()
+            }
         }
     }
 }

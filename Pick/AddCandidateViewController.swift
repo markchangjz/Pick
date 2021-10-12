@@ -4,6 +4,7 @@ import Firebase
 class AddCandidateViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    var addCandidateCompletion: (() -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class AddCandidateViewController: UIViewController {
         db.collection("pick").document("candidates").setData(docData) { error in
             if error == nil {
                 self.dismiss(animated: true)
+                self.addCandidateCompletion?()
             }
         }
     }

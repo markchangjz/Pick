@@ -70,7 +70,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BRe-qi-Gae">
                             <connections>
-                                <segue destination="fCt-ff-UjU" kind="show" id="HLm-Xp-nMe"/>
+                                <segue destination="fCt-ff-UjU" kind="show" identifier="addCandidate" id="HLm-Xp-nMe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
